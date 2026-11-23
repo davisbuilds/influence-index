@@ -2,7 +2,6 @@ import path from 'node:path';
 import { defineConfig, devices } from '@playwright/test';
 import { browserUse } from './browser-runtime.cjs';
 
-// Exercise the real project/browser/globalSetup wiring without app or DB state.
 export default defineConfig({
   testDir: path.resolve('scripts'),
   testMatch: 'browser-runtime.spec.ts',

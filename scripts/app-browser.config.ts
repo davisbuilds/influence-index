@@ -2,8 +2,6 @@ import path from "node:path";
 import { defineConfig, devices } from "@playwright/test";
 import { browserUse } from "./browser-runtime.cjs";
 
-// An explicit external target is useful for checking a deployed build or proving
-// a regression against the previous production server. Normal runs own port 3018.
 const externalTarget = process.env.PLAYWRIGHT_APP_BASE_URL;
 const baseURL = externalTarget ?? "http://127.0.0.1:3018";
 
